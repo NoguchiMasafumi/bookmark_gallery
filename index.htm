@@ -1,0 +1,565 @@
+<html>
+
+    <head>
+        <style>
+            /* モーダルのスタイル */
+            .modal {
+                display: none; /* 初期状態では非表示 */
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0,0,0,0.4);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer; /* カーソルをポインターに変更 */
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+            }
+            .cont1{
+                display:none;
+            }
+            .flt_lef{float:left;}
+
+            .clearfix::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            .rad_4{
+                border-radius: 4px 4px 4px 4px;
+                behavior:urL(http://asp.center.his/media/js/radius.htc);
+            }
+            .shd2_9{box-shadow: 0px 2px 8px -2px #999999;-moz-box-shadow: 0px 2px 8px -2px #999999;-webkit-box-shadow: 0px 2px 8px -2px #999999;}
+
+            .bg_c01{background-color:#efefff;}
+            .pack1{margin:0px 15px 15px 0px;height:80px;box-shadow: 0px 2px 8px -2px #999999;-moz-box-shadow: 0px 2px 8px -2px #999999;-webkit-box-shadow: 0px 2px 8px -2px #999999;}
+            .pack1 div{padding:8px;}
+            .exp1{width:130px;font-size:11px;}
+            .link1{width:130px;line-height:100%;font-size:15px;}
+            .fnt_sx{font-size:10px;}
+            .cat1{font-size:24px;font-weight:bold;}
+            hr{margin-top:50px;}
+
+
+            .cent{width:1200px;margin-left:auto;margin-right:auto;}
+        </style>
+
+
+    </head>
+    <body>
+
+
+        <div class="cent">
+
+
+
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="modal-text"></div>
+                </div>
+            </div>
+
+
+
+            <br />↓　のリンクを　クリックではない、クリックではなく　ドラッグ　で　ブックマークバーへ　ドロップ<br /><br />
+
+        
+
+            
+
+
+
+            <hr>
+            <span class="cat1">【add_info】</span>
+            <div class="clearfix">
+                <!--*****************************************--><div class='flt_lef rad_4 bg_c01 pack1'><div class='flt_lef exp1'>関東1A</div>	<div class='flt_lef link1'><a href="javascript:(function(j,f){prtl_c='1A';j=['http://apport.his/air_ivr/add_info/loading.js','http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js','http://apport.his/air_ivr/add_info/moment.js','http://apport.his/air_ivr/add_info/add_info.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f()})();">add_info_aprt</a><br><span class='fnt_sx'>2024/9/25</span></div>	<div class='flt_lef'><input type="button" value="詳細" class='show-modal shd2_9'><textarea class='cont1'>2024年8月サーバー移転のため本体置き場所をapport化                    </textarea></div></div>
+                <!--*****************************************--><div class='flt_lef rad_4 bg_c01 pack1'><div class='flt_lef exp1'>関東国内1K用</div>	<div class='flt_lef link1'><a href="javascript:(function(j,f){prtl_c='1K';j=['http://apport.his/air_ivr/add_info/loading.js','http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js','http://apport.his/air_ivr/add_info/moment.js','http://apport.his/air_ivr/add_info/add_info.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f()})();">add_info_aprt</a><br><span class='fnt_sx'>2024/9/25</span></div>	<div class='flt_lef'><input type="button" value="詳細" class='show-modal shd2_9'><textarea class='cont1'>add_info 関東国内1K用                    </textarea></div></div>
+                <!--*****************************************--><div class='flt_lef rad_4 bg_c01 pack1'><div class='flt_lef exp1'>関西2A用</div>	<div class='flt_lef link1'><a href="javascript:(function(j,f){prtl_c='2A';j=['http://apport.his/air_ivr/add_info/loading.js','http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js','http://apport.his/air_ivr/add_info/moment.js','http://apport.his/air_ivr/add_info/add_info.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f()})();">add_info_aprt</a><br><span class='fnt_sx'>2024/9/25</span></div>	<div class='flt_lef'><input type="button" value="詳細" class='show-modal shd2_9'><textarea class='cont1'>add_info 関西2A用                    </textarea></div></div>
+                <!--*****************************************--><div class='flt_lef rad_4 bg_c01 pack1'><div class='flt_lef exp1'>中部3A用</div>	<div class='flt_lef link1'><a href="javascript:(function(j,f){prtl_c='3A';j=['http://apport.his/air_ivr/add_info/loading.js','http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js','http://apport.his/air_ivr/add_info/moment.js','http://apport.his/air_ivr/add_info/add_info.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f()})();">add_info_aprt</a><br><span class='fnt_sx'>2024/9/25</span></div>	<div class='flt_lef'><input type="button" value="詳細" class='show-modal shd2_9'><textarea class='cont1'>add_info 中部3A用                    </textarea></div></div>
+                <!--*****************************************--><div class='flt_lef rad_4 bg_c01 pack1'><div class='flt_lef exp1'>九州4A用</div>	<div class='flt_lef link1'><a href="javascript:(function(j,f){prtl_c='4A';j=['http://apport.his/air_ivr/add_info/loading.js','http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js','http://apport.his/air_ivr/add_info/moment.js','http://apport.his/air_ivr/add_info/add_info.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f()})();">add_info_aprt</a><br><span class='fnt_sx'>2024/9/25</span></div>	<div class='flt_lef'><input type="button" value="詳細" class='show-modal shd2_9'><textarea class='cont1'>add_info 九州4A用                    </textarea></div></div>
+                <!--*****************************************--><div class='flt_lef rad_4 bg_c01 pack1'><div class='flt_lef exp1'>札幌8A用</div>	<div class='flt_lef link1'><a href="javascript:(function(j,f){prtl_c='8A';j=['http://apport.his/air_ivr/add_info/loading.js','http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js','http://apport.his/air_ivr/add_info/moment.js','http://apport.his/air_ivr/add_info/add_info.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f()})();">add_info_aprt</a><br><span class='fnt_sx'>2024/9/25</span></div>	<div class='flt_lef'><input type="button" value="詳細" class='show-modal shd2_9'><textarea class='cont1'>add_info 札幌8A用                    </textarea></div></div>
+                <!--*****************************************--><div class='flt_lef rad_4 bg_c01 pack1'><div class='flt_lef exp1'>中国JA用</div>	<div class='flt_lef link1'><a href="javascript:(function(j,f){prtl_c='JA';j=['http://apport.his/air_ivr/add_info/loading.js','http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js','http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js','http://apport.his/air_ivr/add_info/moment.js','http://apport.his/air_ivr/add_info/add_info.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f()})();">add_info_aprt</a><br><span class='fnt_sx'>2024/9/25</span></div>	<div class='flt_lef'><input type="button" value="詳細" class='show-modal shd2_9'><textarea class='cont1'>add_info 中国JA用                    </textarea></div></div>
+            </div>
+
+
+
+            <hr />
+            <span class="cat1">【TC_chk】</span>
+            <div class="clearfix">
+
+
+
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>XJサイト情報取得(Route8)</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript: (function () { const arTr = Array.from([...document.querySelectorAll('section')].find(elem => elem.querySelector('h4')?.textContent.includes('Flight summary')).querySelectorAll('tr')); const trNo = arTr.filter(tr => !tr.querySelector('table')); const trDe = arTr.filter(tr => tr.querySelector(&quot;img[src*='connectingFlight.png']&quot;)); let date = []; let flit = []; let desc = []; trNo.forEach(elem => { if ((elem.innerText.includes('Depart:') || elem.innerText.includes('Return:')) && !isNaN(new Date(elem.innerText.split(', ')[1]))&& elem.innerText.split(', ')[1].length>6) { const datn = new Date(elem.innerText.split(', ')[1]); const year = datn.getFullYear(); const monu = ('0' + (datn.getMonth() + 1)).slice(-2); const dayn = ('0' + datn.getDate()).slice(-2); date.push(`${year}/${monu}/${dayn}`); } if (elem.innerText.includes('AirAsia,')) { flit.push(elem.innerText.split(', ')[1].split(/\n/)[0].replace(/\s/g, '')); } }); trDe.forEach(elem => { let desp = []; const para = elem.querySelectorAll('p'); if (para.length >= 2 && para[1].innerText.trim() !== '') { desp.push(para[1].innerText); } if (para.length >= 5 && para[4].innerText.trim() !== '') { desp.push(para[4].innerText); } if (desp.length > 0) { desc.push(desp.join('/')); } }); const sect = document.querySelector('section'); const pnrn = sect.querySelectorAll('h3')[1].textContent.replace(/\s/g, '').replace(/\n/g, ''); const tbls = Array.from(sect.querySelectorAll('table')).find(tbl => Array.from(tbl.querySelectorAll('th')).some(head => head.innerText.includes('Guest details'))); const cell = tbls.querySelector('tbody > tr > td'); const data = Array.from(cell.querySelectorAll('div')).map(div => div.innerText.replace(/\s*\(Adult\)\s*|\s*\(Child\)\s*|\s*\(Infant\)\s*/g, '')); resu = data.map(item =>{const parts = item.split(' ');const lastName = parts.slice(-1)[0];const firstName = parts.slice(0, -1).join(' ');return `\t\t${lastName},${firstName}\t\t\t\t\t\t\t\t\t\t\t\t\t${pnrn}\t\t\t${flit.join(',')}\t${date.join(',')}\t${desc.join(',')}`;}).join('\n');navigator.clipboard.writeText(resu); alert('got'); })();">get_XJ_mail</a>
+                        <br>
+                        <span class='fnt_sx'>2025/03/19</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>XJからのメールから　各PNRのフライトやお名前の情報を取得しクリップボードにコピーする
+    エクセルマクロget_apiに貼り付けてTCchk業務の効率化の為
+    https://docs.google.com/spreadsheets/d/1s8NcCweS72A9lW5_IvUkMtwmAw5DzR8_X-j-zvN8jzM/edit?gid=0#gid=0
+    https://docs.google.com/drawings/d/1qIw5iSixum0HJVPg4wLsAlkrditPCLHwOBJAS3_kkgc/edit</textarea>
+                    </div>
+                </div>
+
+
+
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>5Jメール情報取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){function ttr(el){return el.textContent.trim().replace(/[\n\r\t]+/g,'')};let lst_td='',bas_tbl='';let str1='',sd='';let tds=document.querySelectorAll('td');for(const td of tds){if(td){if(td.textContent.includes('BOOKING REFERENCE NO.')){str1=td.textContent;lst_td=td}}}let spans=lst_td.querySelectorAll('span');let str_ref1=spans[spans.length-1].textContent;let btg=document.querySelectorAll('b'),ar_pax=[],ar_seat=[];let st_flt='',st_dt='',st_des='';let ar_flt=[],ar_dt=[],ar_des=[],ar_splt_pax=[];for(const bt of btg){if(bt.textContent.includes('Guest Details')){bas_tbl=bt.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;let tgt_tbl=bas_tbl.querySelectorAll('table')[0];let tbl_cel=tgt_tbl.querySelectorAll('table');for(ilp1=0;ilp1<tbl_cel.length;ilp1++){if(ilp1%3===0){let st_pax1=ttr(tbl_cel[ilp1].querySelectorAll('td')[0]);let st_seat1=ttr(tbl_cel[ilp1+2].querySelectorAll('td')[2]);if(st_pax1.replace(/\s/g,'')!=''){ar_splt_pax=st_pax1.split(' ');if(ar_splt_pax.length==3){st_pax1=ar_splt_pax[2]+'/'+ar_splt_pax[1]+' '+ar_splt_pax[0]}else{st_pax1='/'+ar_splt_pax[1]+' '+ar_splt_pax[0]}ar_pax.push(st_pax1);ar_seat.push(st_seat1)}else{ar_seat[ar_seat.length-1]=ar_seat[ar_seat.length-1]+','+st_seat1}}}}if(bt.textContent.includes('Flight Details')){bas_tbl=bt.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;let tgt_tbl=bas_tbl.querySelectorAll('table')[0];let tr1=tgt_tbl.querySelectorAll('tr');for(ilp1=0;ilp1<tr1.length;ilp1++){if(ilp1%7===0){st_des=ttr(tr1[ilp1].querySelectorAll('td')[0]);st_des=st_des.replace('-','/');let dateObj=new Date(ttr(tr1[ilp1+1].querySelectorAll('td')[0]));let year=dateObj.getFullYear();let month=dateObj.getMonth()+1;let day=dateObj.getDate();let formattedDate=`${year}/${month.toString().padStart(2, '0')}/${day.toString().padStart(2,'0')}`;st_flt=ttr(tr1[ilp1].querySelectorAll('td')[1]);st_flt=st_flt.replace(' ','');ar_des.push(st_des);ar_flt.push(st_flt);ar_dt.push(formattedDate)}}}}for(ilp1=0;ilp1<ar_pax.length;ilp1++){if(sd!=''){sd=sd+'\n'};sd=`${sd}\t\t${ar_pax[ilp1]}\t\t\t\t\t\t\t\t\t\t\t\t\t${str_ref1}\t\t\t${ar_flt.join(',')}\t${ar_dt.join(',')}\t${ar_des.join(',')}\t\t${ar_seat[ilp1]}`}navigator.clipboard.writeText(sd);alert('Got')})();">get_5J</a>
+                        <br>
+                        <span class='fnt_sx'>2024/04/30</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>5Jからのメールに記載されているフライトやお名前の情報を取得しクリップボードにコピーする
+    メール件名例は「Your Itinerary Receipt for Booking No.」
+    エクセルマクロget_apiに貼り付けてTCchk業務の効率化の為
+    https://docs.google.com/spreadsheets/d/1s8NcCweS72A9lW5_IvUkMtwmAw5DzR8_X-j-zvN8jzM/edit?gid=0#gid=0
+    https://docs.google.com/drawings/d/1qIw5iSixum0HJVPg4wLsAlkrditPCLHwOBJAS3_kkgc/edit</textarea>
+                    </div>
+                </div>
+
+
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>XJサイト情報取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){var it_mod=-1,sd='';const chk_titl=['| AirAsia'],dt1=new Date(document.querySelectorAll('.date')[0].innerText),dt2=`${dt1.getFullYear()}/${dt1.getMonth() + 1}/${dt1.getDate()}`,el_hd=document.querySelectorAll('.header'),dep1=el_hd[0].innerText.split('(')[1].substring(0,3),arv1=el_hd[1].innerText.split('(')[1].substring(0,3),str_flt=document.querySelectorAll('.details')[0].querySelector('label').innerText.replace(' ','');var st_pnr='',flt_px=document.querySelectorAll('.flight-fares-addons')[1].querySelectorAll('.flight-passengers');for(it_lp1=0;it_lp1<flt_px.length;it_lp1++){var px_nam=flt_px[it_lp1].querySelectorAll('.light-dark')[0].innerText;var flt_rw=flt_px[it_lp1].querySelectorAll('.flight-row');var ssr='';for(it_lp2=0;it_lp2<flt_rw.length;it_lp2++){var cls_txt=flt_rw[it_lp2].innerText;if(cls_txt.includes('Seat')||cls_txt.includes('座席')){var seat=flt_rw[it_lp2].querySelectorAll('label')[0].innerText.replace(/[\n\r\t]+/g,'')};var lbl1=flt_rw[it_lp2].querySelectorAll('label:first-child');for(it_lp3=0;it_lp3<lbl1.length;it_lp3++){var lbl2=lbl1[it_lp3].querySelectorAll('label');for(it_lp4=0;it_lp4<lbl2.length;it_lp4++){const lbl_txt=lbl2[it_lp4].innerText;if(lbl_txt.includes('荷物')||lbl_txt.includes('Baggage')){ssr=(ssr!='')?ssr+'/':'';ssr+=lbl2[it_lp4].innerText}}}}ar_nam=px_nam.split(' ');let lastName=ar_nam[ar_nam.length-1];let firstName=ar_nam.slice(0,ar_nam.length-1).join(' ');sd+='\t\t'+lastName+', '+firstName+'\t\t\t\t\t\t\t\t\t\t\t\t\t\t'+st_pnr+'\t\t'+str_flt+'\t'+dt2+'\t'+dep1+'/'+arv1+'\t'+ssr+'\t'+seat+'\n'}navigator.clipboard.writeText(sd);alert('Got')})();">get_XJ_md</a>
+                        <br>
+                        <span class='fnt_sx'>2025/02/27</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>XJのサイト上の各PNRのフライトやお名前の情報を取得しクリップボードにコピーする
+    エクセルマクロget_apiに貼り付けてTCchk業務の効率化の為
+    https://docs.google.com/spreadsheets/d/1s8NcCweS72A9lW5_IvUkMtwmAw5DzR8_X-j-zvN8jzM/edit?gid=0#gid=0
+    https://docs.google.com/drawings/d/1qIw5iSixum0HJVPg4wLsAlkrditPCLHwOBJAS3_kkgc/edit</textarea>
+                    </div>
+                </div>
+
+
+
+
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>XJサイト情報取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){var it_mod=-1,sd='';const chk_titl=['| AirAsia'],dt1=new Date(document.querySelectorAll('.date')[0].innerText),dt2=`${dt1.getFullYear()}/${dt1.getMonth() + 1}/${dt1.getDate()}`,el_hd=document.querySelectorAll('.header'),dep1=el_hd[0].innerText.split('(')[1].substring(0,3),arv1=el_hd[1].innerText.split('(')[1].substring(0,3),str_flt=document.querySelectorAll('.details')[0].querySelector('label').innerText.replace(' ','');var st_pnr='',flt_px=document.querySelectorAll('.flight-fares-addons')[1].querySelectorAll('.flight-passengers');for(it_lp1=0;it_lp1<flt_px.length;it_lp1++){var px_nam=flt_px[it_lp1].querySelectorAll('.light-dark')[0].innerText;var flt_rw=flt_px[it_lp1].querySelectorAll('.flight-row');var ssr='';for(it_lp2=0;it_lp2<flt_rw.length;it_lp2++){var cls_txt=flt_rw[it_lp2].innerText;if(cls_txt.includes('Seat')||cls_txt.includes('%E5%BA%A7%E5%B8%AD')){var seat=flt_rw[it_lp2].querySelectorAll('label')[0].innerText.replace(/[\n\r\t]+/g,'')};var lbl1=flt_rw[it_lp2].querySelectorAll('label:first-child');for(it_lp3=0;it_lp3<lbl1.length;it_lp3++){var lbl2=lbl1[it_lp3].querySelectorAll('label');for(it_lp4=0;it_lp4<lbl2.length;it_lp4++){const lbl_txt=lbl2[it_lp4].innerText;if(lbl_txt.includes('%E8%8D%B7%E7%89%A9')||lbl_txt.includes('Baggage')){ssr=(ssr!='')?ssr+%22/%22:%22%22;ssr+=lbl2[it_lp4].innerText}}}}ar_nam=px_nam.split(%22%20%22);sd=sd+%22\t\t%22+ar_nam[1]+%22,%20%22+ar_nam[0]+%22\t\t\t\t\t\t\t\t\t\t\t\t\t\t%22+st_pnr+%22\t\t%22+str_flt+%22\t%22+dt2+%22\t%22+dep1+%22/%22+arv1+%22\t%22+ssr+%22\t%22+seat+%22\n%22}navigator.clipboard.writeText(sd);alert(%22Got%22)})();">get_XJ</a>
+                        <br>
+                        <span class='fnt_sx'>2022/2/22</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>XJのサイト上の各PNRのフライトやお名前の情報を取得しクリップボードにコピーする
+    エクセルマクロget_apiに貼り付けてTCchk業務の効率化の為
+    https://docs.google.com/spreadsheets/d/1s8NcCweS72A9lW5_IvUkMtwmAw5DzR8_X-j-zvN8jzM/edit?gid=0#gid=0
+    https://docs.google.com/drawings/d/1qIw5iSixum0HJVPg4wLsAlkrditPCLHwOBJAS3_kkgc/edit
+    最終更新日は間違いなしコロナ自粛中作成</textarea>
+                    </div>
+                </div>
+
+
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>ITメール情報取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){function itxrep(element){return element.innerText.replace(/[\n\r\t]+/g,'')};function ps2(st1){return st1.padStart(2,'0')};function itx(st){return st.innerText};var it_mod=-1,sd='';const d=document,tbl=d.querySelectorAll('table');var ix=[],ar_fltlgh=[],ar_nam=[],str_nm='',int_idd;tbl.forEach((el,i)=>(itx(el).includes('%E4%BA%88%E7%B4%84%E7%95%AA%E5%8F%B7')&&(ix[0]=i),itx(el).includes('%E4%B9%97%E5%AE%A2%E5%90%8D')&&(ix[1]=i),itx(el).includes('tigerlight')&&ar_fltlgh.push(i)));const ar_ref=tbl[ix[0]].querySelectorAll('span')[2].innerText.split(' '),if1=Number(ar_fltlgh.slice(-2,-1)),if2=Number(ar_fltlgh.slice(-1)),ds1=itx(tbl[if1+1]).split(' ').filter(w=>w.length===3),ds2=itx(tbl[if2+1]).split(' ').filter(w=>w.length===3),ef1_td1=tbl[if1+4].querySelectorAll('td')[1],ef2_td1=tbl[if2+4].querySelectorAll('td')[1];ar_dt1=itxrep(ef1_td1.querySelectorAll('span')[1]).split(' '),ar_dt2=itxrep(ef2_td1.querySelectorAll('span')[1]).split(' '),ar_yy1=itxrep(ef1_td1.querySelectorAll('span')[3]).split(' '),ar_yy2=itxrep(ef2_td1.querySelectorAll('span')[3]).split(' ');tbl[ix[1]].querySelectorAll('tr').forEach((tr,i)=>{i>0&&(ar_nam=itx(tr).split(' '),str_nm=ar_nam[1],ar_nam[2]!=' '&&(str_nm=`${ar_nam[2]}${ar_nam[1]}`),sd=sd+'\t\t'+str_nm+'\t\t\t\t\t\t\t\t\t\t\t\t\t'+ar_ref[1]+'\t\t\t'+itx(tbl[if1+2]).trim()+','+itx(tbl[if2+2]).trim()+'\t'+ar_yy1[1]+'/'+ps2(ar_dt1[1])+'/'+ps2(ar_dt1[0])+','+ar_yy2[1]+'/'+ps2(ar_dt2[1])+'/'+ps2(ar_dt2[0])+'\t'+ds1.join('/')+','+ds2.join('/')+'\n')});navigator.clipboard.writeText(sd);alert('Got')})();">get_IT</a>
+                        <br>
+                        <span class='fnt_sx'>2024/04/12</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>ITからのメールに記載されているフライトやお名前の情報を取得しクリップボードにコピーする
+    メール件名例は「タイガーエア台湾 予約確認」
+    エクセルマクロget_apiに貼り付けてTCchk業務の効率化の為
+    https://docs.google.com/spreadsheets/d/1s8NcCweS72A9lW5_IvUkMtwmAw5DzR8_X-j-zvN8jzM/edit?gid=0#gid=0
+    https://docs.google.com/drawings/d/1qIw5iSixum0HJVPg4wLsAlkrditPCLHwOBJAS3_kkgc/edit</textarea>
+                    </div>
+                </div>
+
+
+
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>MMメール情報取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){function ttr(el){return el.textContent.trim().replace(/[\n\r\t]+/g,'')};let int_mod=-1,sd='',ar_dt=[],ar_flt=[],ar_des=[],ar_pax=[],ar_seat=[],sref='';const airports=['KIX','KUH','CTS','SDJ','KIJ','NRT','HND','MYJ','FUK','NGS','KMI','KOJ','OKA','ISG','ASJ','MMB','NGO','OIT','ICN','PUS','TPE','KHH','HKG','PVG','BKK'];const cities=['Osaka (Kansai)','Kushiro','Sapporo (Shin-Chitose)','Sendai','Niigata','Tokyo (Narita)','Tokyo (Haneda)','Matsuyama / Ehime','Fukuoka','Nagasaki','Miyazaki','Kagoshima','Okinawa (Naha)','Ishigaki','Amami','Memanbetsu','Nagoya (Chubu)','Oita','Seoul (Incheon)','Busan','Taipei (Taoyuan)','Kaohsiung','Hong Kong','Shanghai (Pudong)','Bangkok (Suvarnabhumi)'];document.querySelectorAll('p').forEach((el)=>{if(ttr(el).includes('Booking Reference')){sref=el.parentNode.parentNode.parentNode.parentNode.parentNode.querySelectorAll('h3')[0].textContent}});document.querySelectorAll('h1').forEach((el)=>{if(el.textContent==='Flight Information'){let elnx=el.parentNode.nextElementSibling;while(elnx!==null){if(elnx.nodeName==='TABLE'){elnx.querySelectorAll('tr').forEach((elr,idx)=>{if(idx!=0){if(idx%2===0){let str_dt=ttr(elr.querySelectorAll('td')[1]).split(' ')[0];if(!ar_dt.includes(str_dt)){ar_dt.push(str_dt)}}else{let str_flt=ttr(elr.querySelectorAll('td')[0]).replace(' ','');if(!ar_flt.includes(str_flt)){ar_flt.push(str_flt)};let st_dp=elr.querySelectorAll('td')[1].textContent.trim().split('\n')[0];let st_av=elr.querySelectorAll('td')[3].textContent.trim().split('\n')[0];let routes=st_dp.replace(/[\n\r\t]+/g,'')+'/'+st_av.replace(/[\n\r\t]+/g,'');let str_des=routes.split(',').map(route=>{let[from,to]=route.split('/');let fromAirport=airports[cities.indexOf(from)];let toAirport=airports[cities.indexOf(to)];return`${fromAirport}/${toAirport}`});if(!ar_des.includes(str_des.toString())){ar_des.push(str_des.toString())}}}});break}elnx=elnx.nextElementSibling}}if(el.textContent==='Passenger Information'){const tables=el.parentNode.parentNode.querySelectorAll('table');for(let i=0;i<tables.length;i++){if(i%2===0){ar_pax.push(ttr(tables[i].querySelectorAll('td')[2]))}else{let str_seat='';tables[i].querySelectorAll('tr').forEach((elr,idx)=>{if(idx!=0){str_seat+=str_seat&&',';str_seat=str_seat+elr.querySelectorAll('td')[2].textContent}});ar_seat.push(str_seat)}}}});for(let ilp1=0;ilp1<ar_pax.length;ilp1++){if(sd!=''){sd=sd+'\n'};sd=`${sd}\t\t${ar_pax[ilp1]}\t\t\t\t\t\t\t\t\t\t\t\t\t${sref}\t\t\t${ar_flt.join(',')}\t${ar_dt.join(',')}\t${ar_des.join(',')}\t\t${ar_seat[ilp1]}`};navigator.clipboard.writeText(sd);alert('Got')})();">get_MM</a>
+                        <br>
+                        <span class='fnt_sx'>2024/04/23</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>MMからのメールに記載されているフライトやお名前の情報を取得しクリップボードにコピーする
+    メール件名例は「【Peach】Your Peach Reservation」
+    エクセルマクロget_apiに貼り付けてTCchk業務の効率化の為
+    https://docs.google.com/spreadsheets/d/1s8NcCweS72A9lW5_IvUkMtwmAw5DzR8_X-j-zvN8jzM/edit?gid=0#gid=0
+    https://docs.google.com/drawings/d/1qIw5iSixum0HJVPg4wLsAlkrditPCLHwOBJAS3_kkgc/edit</textarea>
+                    </div>
+                </div>
+
+
+
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>MMサイト情報取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){$('.mm_chk_hide').on('click',function(event){$('#mm_chk%22).hide();});var%20st_tex=%22%3Cdiv%20class='managebooking-tab'%20id='mm_chk'%3E%3Cdiv%20class='tab-content'%20style='font-family:%EF%BC%AD%EF%BC%B3%20%EF%BC%B0%E3%82%B4%E3%82%B7%E3%83%83%E3%82%AF;'%3E%3Cdiv%20style='text-align:right;'%3E%3Cinput%20class='cancelExtra%20custom-btn'%20type='button'%20value='X'%20style='margin-top:5px;padding-top:5px;'%20onclick='$(\%22#mm_chk\%22).hide();'%3E%3C/div%3E%3Cdiv%20style='margin:10px;'%3E%22+document.getElementsByName(%22pnr%22)[0].value+%22%3C/div%3E%3Ctable%20style='margin:10px;'%3E%3Ctr%20style='background-color:#f1f1f1;'%3E%3Ctd%20style='padding:3px;'%3EPassenger%3C/td%3E%3Ctd%20style='padding:3px;'%3EBirthDate%3C/td%3E%3Ctd%20tyle='padding:3px;'%3EExpireDate%3C/td%3E%3Ctd%20style='padding:3px;'%3EPassportNum%3C/td%3E%3Ctd%20style='padding:3px;'%3EIssue%3C/td%3E%3Ctd%20style='padding:3px;'%3ENationality%3C/td%3E%3Ctd%20style='padding:3px;'%3ESeat_Go%3C/td%3E%3Ctd%20style='padding:3px;'%3ESeat_Rt%3C/td%3E%3Ctd%20style='padding:3px;'%3EGrpRef%3C/td%3E%3C/tr%3E%22;for(it_lp1=0;it_lp1%3C$(%22#manage-passenger-section%20.global-details-block%22).length;it_lp1++){st_tex=st_tex+(%22%3Ctr%3E%3Ctd%20style='padding:3px;'%3E%22+$(%22input[name=lastName]%22).eq(it_lp1).val()+%22/%22+$(%22input[name=firstName]%22).eq(it_lp1).val()+%22%20%22+$(%22select%22).eq(parseInt(it_lp1*4+2)).val()+%22%20%22+%22%3C/td%3E%22+%22%3Ctd%20style='padding:3px;'%3E%22+$(%22input[name=dob]%22).eq(it_lp1).val()+%22%20%22+%22%3C/td%3E%22+%22%3Ctd%20style='padding:3px;'%3E%22+$(%22input[name=passengerPassportExpiryDate]%22).eq(it_lp1).val()+%20%22%3C/td%3E%3Ctd%3E%22+$(%22input[name=travelId]%22).eq(it_lp1).val()+%22%3C/td%3E%3Ctd%3E%22+$(%22select%22).eq(parseInt(it_lp1*4+3)).val()+%22%3C/td%3E%3Ctd%3E%22+$(%22select%22).eq(parseInt(it_lp1*4+4)).val()+%22%3C/td%3E%3Ctd%3E%22+$(%22#pass0%20.pass:nth-child(%22%20+%20(it_lp1+2)%20+%20%22)%20.psgSeatLabel%22).text()+%22%3C/td%3E%3Ctd%3E%22+$(%22#pass1%20.pass:nth-child(%22%20+%20(it_lp1+2)%20+%20%22)%20.psgSeatLabel%22).text()+%22%3C/td%3E%3Ctd%3E%22+$(%22input[name=groupId]%22).eq(it_lp1).val()+%22%3C/td%3E%3C/tr%3E%22)}st_tex=st_tex+%22%3C/table%3E%3C/div%3E%3C/div%3E%22;$(%22body%20%3E%20div.body_wrapper%20%3E%20div.container.mobile-null-padding.zero-padding%22).prepend(st_tex);})();">MM_chk5</a>
+                        <br>
+                        <span class='fnt_sx'>2023/07/26</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>MMサイト上でPNRの情報を表示させたのちこのBMを押すとエクセルに貼り付けられるよう
+    クリップボードにコピーされる　名前の一致不一致を確認するように作成
+    座席番号やREFも取得する</textarea>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+            <hr />
+            <span class="cat1">【BackOffice】</span>    
+            <div class="clearfix">
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>業務改革</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){vv=document.getElementsByName('tour')[0].value.replace(/\r?\n/g,',');vv=vv.replace(',,',',');if(vv.substr(-1,1)==','){document.getElementsByName('tour')[0].value=vv.substring(0,vv.length-1)}else{document.getElementsByName('tour')[0].value=vv}}());">tc_comma</a>
+                        <br>
+                        <span class='fnt_sx'>2017/06/15</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>■ツアコカンマ　
+    特定の表記の型を変化させる
+
+    javascript:(
+        function(){
+            vv=document.getElementsByName(""tour"")[0].value.replace(/\r?\n/g,"","");
+            vv=vv.replace("",,"","","");
+            if(vv.substr(-1,1)=="",""){
+                document.getElementsByName(""tour"")[0].value=vv.substring(0,vv.length-1)
+            }else{
+                document.getElementsByName(""tour"")[0].value=vv
+            }
+        }()
+    );
+    </textarea>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <hr>
+            <span class="cat1">【発券補助】</span>
+            <div class="clearfix">
+
+
+            <div class="clearfix">
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>発券精算金額</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript: (function() {if(document.querySelector('.his-messagebox')){alert('%E3%81%BE%E3%81%A0%E8%AA%AD%E8%BE%BC%E4%B8%AD%E3%81%AE%E3%82%88%E3%81%86%E3%81%A7%E3%81%99')}else{const targetIndices = [1, 8, 15, 24, 26, 10, 14];const add_quot = [1, 26];let txcl = '';let int_cnt=0;document.querySelectorAll('tr').forEach(row => {const el_tds = row.querySelectorAll('td');if (el_tds.length > 6 && el_tds[6].innerText === '%E5%AE%8C%E4%BA%86') {int_cnt=int_cnt+1;txcl += targetIndices.map((index, i) => {if (index != 15) {return (add_quot.includes(index) ?%20%22%27%22%20:%20%22%22)%20+%20el_tds[index].innerText.replace(/,/g,%20%22%22).replace(/\n/g,%20%22_%22);}%20else%20{var%20htmCont%20=%20el_tds[index].querySelector(%22div%22).innerHTML;htmCont%20=%20htmCont.trim().replace(/,|%3Cbr%3E/g,%20%22%22);htmCont%20=%20htmCont.includes(%22span%22)%20?%20htmCont.replace(/%3Cspan%20class=%22minus%22%3E|%3C\/span%3E/g,%20%22%22)%20:%20htmCont;const%20ar_splt1%20=%20htmCont.split(/\n/g);const%20ar_temp1%20=%20ar_splt1.filter(item%20=%3E%20item%20!==%20%22%22);const%20ar_fn1%20=%20[];ar_temp1.forEach((item,%20index)%20=%3E%20{item.charAt(0)%20!==%20%22-%22%20&&%20ar_fn1.push(item);});return%20ar_fn1.join(%22_%22);}}).join(%22\t%22)%20+%20%22\n%22;}});if%20(txcl)%20{const%20textarea%20=%20document.createElement(%22textarea%22);textarea.value%20=%20txcl;document.body.appendChild(textarea);textarea.select();document.execCommand(%22copy%22);document.body.removeChild(textarea);alert(%22Got%20%22+int_cnt);}%20else%20{alert(%22Nothing%22);}};})();">TKsysCOPY ticket_system_copy</a>
+                        <br>
+                        <span class='fnt_sx'>2024/12/1</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>新発券システムに表示された　完了　になっている情報をクリップボードにコピーする
+            エクセルマクロpayment_assistに貼り付けるために用意</textarea>
+                    </div>
+                </div>
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>チケット番号を取得したい</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(j,f){j=['http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f();$(%22#flightList%20tr%22).each(function(){var%20ar_splt=$(this).find(%22td:eq(0)%20a%22).text().split(/\n/);var%20ar_splt2=$(this).find(%22td:eq(4)%22).text().split(/\n/);console.log(ar_splt[2]+%22,%22+ar_splt2[2]+%22,%22+$(this).find(%22input:eq(1)%22).val()+%22,%22+$(this).find(%22input:eq(2)%22).val().replace(%22,%22,%22%22));});})();">tkt_num</a>
+                        <br>
+                        <span class='fnt_sx'>2020/02/25</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>新発券システムで　リファンド一覧を表示させた後
+    チケット番号を取得したい時BMを押すとConsole.logに内容を書き出す
+    開発者ツールはCTRL+SHIFT+i　で　上部タブのConsole を見る</textarea>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <hr />
+            <span class="cat1">【小便利】</span>
+            <div class="clearfix">
+
+
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>動画字幕作成</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:( function(){ var v=document.getElementsByTagName('video')[0]; var sh=''; sh=sh+'<div style=\'position:absolute;background-color:#ffffff;right:20px;z-index:999;border-radius:%204px%204px%204px%204px;padding:8px;\%22%3E';%20sh=sh+'SUBTITLE%20GENERATOR%3Cbr%20/%3E';%20sh=sh+'%3Cinput%20type=\%22hidden\%22%20id=\%22inp_tim_cnt\%22%3E';%20sh=sh+'%3Cinput%20type=\%22hidden\%22%20id=\%22inp_tim_cnt2\%22%3E';%20sh=sh+'%3Cinput%20type=\%22text\%22%20id=\%22inp_sub_txt\%22%3E';%20sh=sh+'%3Cinput%20type=\%22button\%22%20onclick=\%22';%20sh=sh+'var_tab1=document.getElementById(\'sub_tbl\');';%20sh=sh+'var_row1=var_tab1.insertRow(-1);';%20sh=sh+'var_cell1=var_row1.insertCell(-1);';%20sh=sh+'var_cell1.innerHTML=document.getElementById(\'inp_tim_cnt\').value+\',\'+document.getElementById(\'inp_tim_cnt2\').value;';%20sh=sh+'var_tab2=document.getElementById(\'sub_tbl\');';%20sh=sh+'var_row2=var_tab2.insertRow(-1);';%20sh=sh+'var_cell2=var_row2.insertCell(-1);';%20sh=sh+'var_cell2.innerHTML=document.getElementById(\'inp_sub_txt\').value;';%20sh=sh+'var_tab3=document.getElementById(\'sub_tbl\');';%20sh=sh+'var_row3=var_tab3.insertRow(-1);';%20sh=sh+'var_cell3=var_row3.insertCell(-1);';%20sh=sh+'var_cell3.innerHTML=\'%3Cbr%20/%3E\';';%20sh=sh+'document.getElementById(\'inp_sub_txt\').value=\'\';';%20sh=sh+'document.getElementById(\'inp_sub_txt\').focus();';%20sh=sh+'\%22%20value=\%22%E8%BF%BD%E5%8A%A0\%22%3E';%20sh=sh+'%3Ctable%20id=\%22sub_tbl\%22%3E';%20sh=sh+'%3C/table%3E';%20sh=sh+'%3C/div%3E';%20document.getElementsByTagName('body')[0].insertAdjacentHTML('afterbegin',sh);%20v.addEventListener(%22timeupdate%22,%20function(){%20i_sub=4;%20hour%20=%20('00'%20+%20Math.floor(v.currentTime%20/%203600)).slice(-2);%20minute%20=%20('00'%20+%20Math.floor((v.currentTime%20-%203600%20*%20hour)%20/%2060)).slice(-2);%20seconds=%20('00'%20+%20Math.floor((v.currentTime%20-%20(3600%20*%20hour)-(60*minute)))).slice(-2);%20milliseconds=((v.currentTime%20-%20(3600%20*%20hour)-(60*minute)-seconds)+'00000').substr(2,3);%20time%20=%20%60${hour}:${minute}:${seconds}.${milliseconds}%60;%20hour2%20=%20('00'%20+%20Math.floor((v.currentTime+i_sub)%20/%203600)).slice(-2);%20minute2%20=%20('00'%20+%20Math.floor(((v.currentTime+i_sub)%20-%203600%20*%20hour2)%20/%2060)).slice(-2);%20seconds2=%20('00'%20+%20Math.floor(((v.currentTime+i_sub)%20-%20(3600%20*%20hour2)-(60*minute2)))).slice(-2);%20milliseconds2=(((v.currentTime+i_sub)%20-%20(3600%20*%20hour2)-(60*minute2)-seconds2)+'00000').substr(2,3);%20time2%20=%20%60${hour2}:${minute2}:${seconds2}.${milliseconds2}%60;%20inp_tim_cnt.value=time;%20inp_tim_cnt2.value=time2;%20},%20false);%20}%20)();">sub_gene字幕作成</a>
+                        <br>
+                        <span class='fnt_sx'>2020/04/16</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input value="詳細" class='show-modal shd2_9' type="button">
+                        <textarea class='cont1'>Chrome で MP 4を再生してる時にこの BMを押すと
+    入力欄が現れ何かを入力し追加を押すと
+    その動画の再生している時間を読み取りSRT 用のテキストを表示する
+    一時停止中でも追加が可能</textarea>
+                    </div>
+                </div>
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>input name値を取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(j,f){j=['http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js','http://asp.center.his/air_ivr/test_place/show_form_name/get_input_name.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f()})();">get_inp_nam</a>
+                        <br>
+                        <span class='fnt_sx'>2020/4/15</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>inputタグでnameがついているものはそのinputの右に名前を表示する</textarea>
+                    </div>
+                </div>
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>任意のタグテキスト取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function() {    var tagName = prompt('%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E3%82%BF%E3%82%B0%E5%90%8D%E3%82%92%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%EF%BC%88%E4%BE%8B%EF%BC%9Ah3, h2, th%EF%BC%89');    var elements = document.getElementsByTagName(tagName);    var texts = [];    for (var i = 0; i < elements.length; i++) {        texts.push(elements[i].textContent);    }    var textToCopy = texts.join('\n');    navigator.clipboard.writeText(textToCopy);    alert(tagName + '%E3%82%BF%E3%82%B0%E3%81%AE%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82');})();">get_tag_text</a>
+                        <br>
+                        <span class='fnt_sx'>2020/1/1</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>このBMを任意のサイトで押すと
+    取得するタグ名を入力してください（例：h3, h2, th）
+    が表示され　OKを押すと対象のタグのテキストをクリップボードにコピーする</textarea>
+                    </div>
+                </div>
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>広告除去</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){aric=['id','class'];arnm=['ad','Ad','ytp','google_ad','video-stream','player-ads','gn_delivery'];for(i=0;i<aric.length;i++){for(j=0;j<arnm.length;j++){document.querySelectorAll('['+aric[i]+'^='+arnm[j]+']').forEach(function(it){it.style.display='none'});};};})();">xad</a>
+                        <br>
+                        <span class='fnt_sx'>2020/1/1</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>サイト上の広告を消す　youtube枠も消える
+    入力方式にしても良いかもしれない　Class：[ad AD ytp]　適用
+    など
+    get_tag_text参照</textarea>
+                    </div>
+                </div>
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>Googleドライブid取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){const dataIds=[];for(let elmnt1 of document.querySelectorAll('.pmHCK > div')){const dataId=elmnt1.dataset.id;console.log(dataId);dataIds.push(dataId)}const dataIdString=dataIds.join('\n');navigator.clipboard.writeText(dataIdString)})();">drv_folder_list</a>
+                        <br>
+                        <span class='fnt_sx'>2024/12/01</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>Googleドライブ共有フォルダを表示させてこのBMを実行すると
+    https://drive.google.com/drive/folders/0ADigrXxF39w4Uk9PVA
+    のようなフォルダのアドレスの最後のidを全て取得することができる</textarea>
+                    </div>
+                </div>
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>チェックボックス全チェック</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){inputs=document.getElementsByTagName('input');for(j=0;j<inputs.length;j++){e=inputs[j];if(e.type=='checkbox'){if(e.checked==true){e.checked=false;}else{e.checked=true;}}};}());">chk_all</a>
+                        <br>
+                        <span class='fnt_sx'>2015/05/30</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>チェックボックスに全てチェックを入れる
+    任意のチェックボックス対応できるよう入力欄があっても良いかもしれない
+    sub_gene参照　on offできてもいいかも</textarea>
+                    </div>
+                </div>
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>Challenge手配管理検索結果情報取得</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(j,f){j=['http://apport.his/air_ivr/add_info/copy_name/copy_name2.js'];f=function(u,s){if(j.length==0){return}u=j.shift()+'?%27+Date.now();s=document.createElement(%27script%27);document.body.appendChild(s);s.charset=%27UTF-8%27;s.addEventListener(%27load%27,f);s.src=u};(document.readyState==%27loading%27)?document.addEventListener(%27DOMContentLoaded%27,f):f()})();">copy_name</a>
+                        <br>
+                        <span class='fnt_sx'>2020/01/01</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>Challengeの手配管理検索結果の内容を取得する
+                add_infoは重いため　名前コピーだけのライト版</textarea>
+                    </div>
+                </div>
+
+
+                <!--*****************************************-->
+                <div class='flt_lef rad_4 bg_c01 pack1'>
+                    <div class='flt_lef exp1'>company勤務実績報告上の残業時間合計表示</div>
+                    <div class='flt_lef link1'>
+                        <a href="javascript:(function(){const t=document.getElementById('APPROVALGRD');if(!t){alert('テーブルが見つかりません。');return;}const a=[];for(let i=1;i<t.rows.length;i++){const r=t.rows[i];const c=r.cells[6];if(c&&c.textContent.trim()==='フレックス合計時間'){break;}if(c&&c.textContent.trim()!==''){a.push(c.textContent.trim());}}if(a.length===0){alert('時間データがありません。');return;}const calc=(arr)=>{let m=0;for(const s of arr){const[h,min]=s.split(':').map(Number);m+=h*60+min-480;}const th=Math.floor(m/60);const rm=Math.abs(m-Math.floor(m/60)*60);return`${th}:${rm.toString().padStart(2,'0')}`;};alert(calc(a));})();">残業計算</a>
+                        <br>
+                        <span class='fnt_sx'>2025/01/22</span>
+                    </div>
+                    <div class='flt_lef'>
+                        <input type="button" value="詳細" class='show-modal shd2_9'>
+                        <textarea class='cont1'>companyの勤務実績報告上を表示させ　実行すると
+    各日の業務時間から8時間を引きそれらの合計を計算した
+    残業時間合計を表示する</textarea>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+    <!--*****************************************************************************************-->
+<script>
+        const modal = document.getElementById("modal");
+        const modalText = document.getElementById("modal-text");
+        const showModalLinks = document.querySelectorAll(".show-modal");
+        const closeButton = document.querySelector(".close");
+
+        function openModal(text, clickedElement) {
+            const convertedText = text.replace(/\r\n|\n/g, "<br>");
+            modalText.innerHTML = convertedText;
+            modal.style.display = "block";
+
+            // クリックされた要素の位置を取得
+            const rect = clickedElement.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+            // モーダルの表示位置を調整
+            const modalWidth = modal.offsetWidth;
+            const modalHeight = modal.offsetHeight;
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            let top = rect.top + scrollTop + rect.height + 10; // ボタンの下に少しスペースを空けて表示
+            let left = rect.left + scrollLeft - (modalWidth / 2) + (rect.width / 2); // ボタンの中央に表示
+
+            // 画面外にはみ出さないように調整
+            if (left < 10) {
+                left = 10;
+            } else if (left + modalWidth > windowWidth - 10) {
+                left = windowWidth - modalWidth - 10;
+            }
+
+            if (top + modalHeight > windowHeight - 10) {
+                top = rect.top + scrollTop - modalHeight - 10; // ボタンの上に表示
+                if (top < 10) {
+                    top = 10; // それでも画面上にはみ出る場合は最上部に
+                }
+            }
+
+
+            modal.style.top = `${top}px`;
+            modal.style.left = `${left}px`;
+        }
+
+        function closeModal() {
+        modal.style.display = "none";
+        }
+
+        showModalLinks.forEach(link => {
+            link.addEventListener("click", (event) => {
+            event.preventDefault(); // デフォルトのリンク挙動をキャンセル
+                const content = link.nextElementSibling;
+                openModal(content.value, event.target); // クリックされた要素を引数として渡す
+            });
+        });
+
+        closeButton.addEventListener("click", closeModal);
+
+        window.addEventListener("click", (event) => {
+            if (event.target == modal) {
+                closeModal();
+            }
+        });
+    </script>
+</html>
